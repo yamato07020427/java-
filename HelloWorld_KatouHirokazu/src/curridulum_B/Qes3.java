@@ -18,14 +18,16 @@ public class Qes3 {
 			System.out.println(b);
 		} //for文を使って2から20までの偶数を1つずつ表示
 
-		for (int c = 10; c <= 1; c--) {
+		for (int c = 10; c >= 1 ; c--) {
 			System.out.println("カウント:" + c);
 		} //for文を使って10から1までカウントダウンして表示
 
 		int sum = 0;
-		for (int d = 1; d <= 100; sum += d++) {
-			System.out.println(sum);
-		} // for文を使って1から100までの合計を表示
+		for (int d = 1; d <= 100; d++) {
+			sum += d++;
+		}
+		System.out.println(sum);
+		// for文を使って1から100までの合計を表示
 
 		String astarisks = "";
 		for (int f = 1; f <= 5; f++) {
@@ -54,9 +56,10 @@ public class Qes3 {
 		int sum1 = 0;
 		int count3 = 1;
 		while (count3 <= 100) {
-			System.out.println(sum1);
 			sum1 += count3++;
-		} //while 文を使って 1 から 100 までの合計 を表示
+		}
+			System.out.println(sum1);
+		 //while 文を使って 1 から 100 までの合計 を表示
 
 		Scanner scanner = new Scanner(System.in); // キーボードから入力を受け取る準備
 		int num = 1; //numの初期化
