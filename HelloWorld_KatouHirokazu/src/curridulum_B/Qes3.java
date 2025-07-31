@@ -24,7 +24,7 @@ public class Qes3 {
 
 		int sum = 0;
 		for (int d = 1; d <= 100; d++) {
-			sum += d++;
+			sum += d;
 		}
 		System.out.println(sum);
 		// for文を使って1から100までの合計を表示
