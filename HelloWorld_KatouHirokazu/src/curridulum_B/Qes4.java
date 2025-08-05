@@ -7,7 +7,7 @@ public class Qes4 {
 
 	/**********************************************************************************
 	*【概要】配列を理解し、反復処理を復習する
-	*【詳細】for型、while型、switch型の反復処理を理解する
+	*【詳細】多次元配列を理解と反復処理を使い、多次元配列の処理を行う
 	**********************************************************************************/
 
 	public static void main(String[] args) {
@@ -29,25 +29,25 @@ public class Qes4 {
 		System.out.println(sum);
 
 		int[] numbers3 = { 12, 7, 9, 21, 5, 18 }; //int型の配列{12,7,9,21,5,18}を用意
-		int Max = numbers3[0]; //int型の変数Max（最大値）に最初の配列を代入
-		int Min = numbers3[0]; ////int型の変数Min（最小値）に最初の配列を代入
+		int max = numbers3[0]; //int型の変数Max（最大値）に最初の配列を代入
+		int min = numbers3[0]; ////int型の変数Min（最小値）に最初の配列を代入
 		for (int c = 1; c < numbers3.length; c++) {
-			if (Max < numbers3[c]) {
-				Max = numbers3[c];
+			if (max < numbers3[c]) {
+				max = numbers3[c];
 			} //Maxの値がMaxよりも大きいなら値を入れ替え
-			if (Min > numbers3[c]) {
-				Min = numbers3[c];
+			if (min > numbers3[c]) {
+				min = numbers3[c];
 			} //Minの値がMinよりも小さいなら値を入れ替え
 		}
-		System.out.println("最大値は" + Max + "です。");
-		System.out.println("最小値は" + Min + "です。");
+		System.out.println("最大値は" + max + "です。");
+		System.out.println("最小値は" + min + "です。");
 
 		int[] numbers4 = { 1, 2, 3, 4, 5 }; //int型の配列{1,2,3,4,5}を用意
 		for (int d = 0; d < numbers4.length; d++) {
 			numbers4[d] = numbers4[d] * 2; //要素を2倍に
-			for (int num : numbers4) {
-				System.out.println(num);
-			}
+		}
+		for (int num : numbers4) {
+			System.out.println(num);
 		}
 
 		int[] numbers5 = { 4, 7, 10, 15, 20 }; //int型の配列{4,7,10,15,20}を用意
@@ -99,28 +99,28 @@ public class Qes4 {
 				{ 30, 2, 10 }
 		};//二次元配列{12, 15, 8}, {6, 19, 25}, {30, 2, 10}を用意する
 
-		int Max1 = array2[0][0]; //int型の変数Max1（最大値）に最初の配列を代入
-		int Min1 = array2[0][0]; //int型の変数Min1（最小値）に最初の配列を代入
+		int max1 = array2[0][0]; //int型の変数Max1（最大値）に最初の配列を代入
+		int min1 = array2[0][0]; //int型の変数Min1（最小値）に最初の配列を代入
 		for (int i = 0; i < array2.length; i++) {
-			for (int j = 1; j < array2[i].length; j++) {
-				if (Max1 < array2[i][j]) {
-					Max1 = array2[i][j];
+			for (int j = 0; j < array2[i].length; j++) {
+				if (max1 < array2[i][j]) {
+					max1 = array2[i][j];
 				} //Max1の値がMax1よりも大きいなら値を入れ替え
-				if (Min1 > array2[i][j]) {
-					Min1 = array2[i][j];
+				if (min1 > array2[i][j]) {
+					min1 = array2[i][j];
 				} //Min1の値がMin1よりも小さいなら値を入れ替え
 			}
 		}
-		System.out.println("最大値は" + Max1 + "です。");
-		System.out.println("最小値は" + Min1 + "です。");
+		System.out.println("最大値は" + max1 + "です。");
+		System.out.println("最小値は" + min1 + "です。");
 
 		int[][][] array3 = {
 				{
 						{ 1, 2 },
 						{ 3, 4 }
 				},
-				{ 
-					    { 5, 6 },
+				{
+						{ 5, 6 },
 						{ 7, 8 }
 				}
 		}; //3次元配列{{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}を用意する
@@ -136,6 +136,4 @@ public class Qes4 {
 
 	}
 }
-	
-
 
